@@ -42,3 +42,17 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+
+
+## Unit-Tests
+
+Build out-of-source inside the ``` _build```
+directory with
+```
+cmake .. -DBUILD_TESTS=TRUE
+```
+then go to the root pugixml dir and call
+```
+./_build/check
+```
+in order to execute all unit tests at once.
