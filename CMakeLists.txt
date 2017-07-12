@@ -49,6 +49,9 @@ endif()
 
 set_target_properties(pugixml PROPERTIES VERSION 1.8 SOVERSION 1)
 get_target_property(PUGIXML_VERSION_STRING pugixml VERSION)
+if (MSVC)
+	set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+endif()
 
 if(BUILD_PKGCONFIG)
 	# Install library into its own directory under LIBDIR
